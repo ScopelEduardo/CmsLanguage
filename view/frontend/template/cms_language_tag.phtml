@@ -1,0 +1,13 @@
+<?php
+/** @var $block \ScopelEduardo\CmsLanguage\Block\CmsLanguage */
+
+$storeLanguage = $block->getStoreLanguage();
+$baseUrl = $block->getBaseUrl();
+$cmsPageUrl = $block->getCmsPageIdentifier();
+
+?>
+<?php if ($block->isMultiStore()): ?>
+
+    <link rel="alternate" hreflang="<?= $storeLanguage ?>" href="<?= $baseUrl . $cmsPageUrl ?>">
+
+<?php endif; ?>
